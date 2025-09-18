@@ -38,14 +38,15 @@ public class UserController {
         return "redirect:/api/user/login-page";
     }
 
-    @PostMapping("/user/login")
-    public String login(LoginRequestDto requestDto, HttpServletResponse res) {
-        try {
-            userService.login(requestDto, res);
-        } catch (Exception e) { //로그인 실패시 서버가 error페이지로 이동하라는 리다이렉트를 보내고, 클라이언트가 아래의 주소로 요청을 보냄
-            return "redirect:/api/user/login-page?error";
-        }
-
-        return "redirect:/";
-    }
+    //이제 필터에서 처리할 것이므로 삭제
+//    @PostMapping("/user/login")
+//    public String login(LoginRequestDto requestDto, HttpServletResponse res) {
+//        try {
+//            userService.login(requestDto, res);
+//        } catch (Exception e) { //로그인 실패시 서버가 error페이지로 이동하라는 리다이렉트를 보내고, 클라이언트가 아래의 주소로 요청을 보냄
+//            return "redirect:/api/user/login-page?error";
+//        }
+//
+//        return "redirect:/";
+//    }
 }
