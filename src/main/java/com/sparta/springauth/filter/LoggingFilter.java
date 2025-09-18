@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 
 @Slf4j(topic = "LoggingFilter") //로깅 찍힐 때 이름
-@Component //컴포넌트로 로깅 등록
+//@Component //컴포넌트로 로깅 등록
 @Order(1) //필터 순서 지정
 public class LoggingFilter implements Filter { //인증 및 인가 처리 필터
     @Override //파라미터 - FilterChain : 필터를 이동할 때 사용
